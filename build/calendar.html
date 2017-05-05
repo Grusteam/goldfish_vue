@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/styles.css" media="all" />
+</head>
+<body>
+	
+	<div v-cloak id="days">
+		<div v-for="(day, index) in content">
+			<div>day {{day.date}}</div>
+
+				<div v-for="(hour, index) in day.cell" @click="(e) => hourClick(e, index)">
+				<!-- <hour v-bind:hour="hour"></hour> -->
+				<div is="hour" v-bind:hour="hour"></div>
+					<!-- <div>{{hour.time}} - {{hour.html}}</div> -->
+				</div>
+				<hr>
+		</div>
+	</div>
+
+<!--  -->
+<!-- <script src="/node_modules/jquery/dist/jquery.min.js"></script> -->
+<script src="/node_modules/vue/dist/vue.js"></script>
+<script src="/node_modules/lodash/lodash.min.js"></script>
+<script defer src="/js/calendar.js"></script>
+</body>
+</html>

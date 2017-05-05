@@ -1,0 +1,244 @@
+{
+	"id": "3",
+	"name": "Best trademark",
+	"brands": [{
+		"id": "0",
+		"brand": "Порошок",
+		"managers": [
+			" Марк"
+		],
+		"status": "3",
+		"contacts": {
+			"Николай": {
+				"Должность": "Генеральный директор",
+				"E-mail": "nikolay@ni.ko",
+				"Тел моб:": "+7 (912) 123-34-23",
+				"Тел раб:": "+7 (912) 123-34-44",
+				"Комментарий": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, natus."
+			},
+			"Петр": {
+				"Должность": "Директор",
+				"E-mail": "nikolay@ni.ko",
+				"Тел моб:": "+7 (912) 123-34-23",
+				"Тел раб:": "+7 (912) 123-34-44",
+				"Комментарий": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nobis."
+			}
+		},
+		"docs": {
+			"18": {
+				"id": "18",
+				"offer": "Презентация",
+				"date": "17.01.2016",
+				"manager": "Маша",
+				"url": "Presentation-v12.docx"
+			},
+			"19": {
+				"id": "19",
+				"offer": "Договор",
+				"date": "18.01.2016",
+				"manager": "Маша",
+				"url": "KP_VALLIANT.docx"
+			}
+		},
+		"activities": [
+			[
+				["04.2004", "7", "GEL", "", "", "", "", "2", "", "comment for SEO field 0"],
+				["05.2000", "", "", "WOM", "400/1000", "", "", "0", "", "comment for SEO field 1"],
+				["01.2016", "", "", "XXX", "400/4000", "", "", "3", "", "comment for SEO field 2"],
+				["02.2016", "", "", "SEO", "800/1000", "", "", "", "", "comment for SEO field 3"],
+				["03.2016", "", "", "ADD", "400/6000", "", "", "1", "Lorem ipsum dolor sit amet, consectetur.", "comment for SEO field 4"]
+			],
+			[
+				["01.2001", "4", "GEL", "", "", "", "", "", "", "comment for SEO field 5"],
+				["", "", "", "Target", "400/1000", "*", "", "", "", "comment for SEO field 6"],
+				["", "", "", "WOM", "600/1000", "", "*", "2", "", "comment for SEO field 7"]
+			],
+			[
+				["02.2005", "3", "GEL", "", "", "", "", "", "", "comment for SEO field 8"],
+				["", "", "", "WOM", "400/1000", "", "", "", "", "comment for SEO field 9"]
+			],
+			[
+				["03.2008", "2", "GEL", "", "", "", "", "", "", "comment for SEO field 10"],
+				["", "", "", "WOM", "400/1000", "", "", "", "", "comment for SEO field 11"]
+			],
+			[
+				["04.2009", "1", "GEL", "", "", "", "", "3", "", "comment for SEO field 12"],
+				["", "", "", "RTB", "200/4000", "*", "*", "4", "", "comment for SEO field 13"]
+			]
+		],
+		"calls": {
+			"1": {
+				"callStatus": "Активно",
+				"date": "01.01.2006",
+				"callContact": "Карл",
+				"callComment": "Прибыльно"
+			},
+			"2": {
+				"callStatus": "Заморожен",
+				"date": "01.01.2016",
+				"callContact": "Yana",
+				"callComment": "Прибыльно"
+			}
+		}
+	}, {
+		"id": "1",
+		"brand": "Элексир",
+		"managers": [
+			"Алла",
+			"Филипп"
+		],
+		"status": "3",
+		"contacts": {
+			"Николай": {
+				"Должность": "Генеральный директор",
+				"E-mail": "nikolay@ni.ko",
+				"Тел моб:": "+7 (912) 123-34-23",
+				"Тел раб:": "+7 (912) 123-34-44",
+				"Комментарий": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, natus."
+			},
+			"Петр": {
+				"Должность": "Директор",
+				"E-mail": "nikolay@ni.ko",
+				"Тел моб:": "+7 (912) 123-34-23",
+				"Тел раб:": "+7 (912) 123-34-44",
+				"Комментарий": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nobis."
+			}
+		},
+		"docs": {
+			"20": {
+				"id": "20",
+				"offer": "Презентация",
+				"date": "19.01.2016",
+				"manager": "Маша",
+				"url": "Presentation-v12.docx"
+			},
+			"21": {
+				"id": "21",
+				"offer": "Договор",
+				"date": "20.01.2016",
+				"manager": "Маша",
+				"url": "KP_VALLIANT.docx"
+			}
+		},
+		"activities": [
+			[
+				["04.2004", "7", "GEL", "", "", "", "", "2", "", "comment for SEO field 0"],
+				["05.2000", "", "", "WOM", "400/1000", "", "", "0", "", "comment for SEO field 1"],
+				["01.2016", "", "", "XXX", "400/4000", "", "", "3", "", "comment for SEO field 2"],
+				["02.2016", "", "", "SEO", "800/1000", "", "", "", "", "comment for SEO field 3"],
+				["03.2016", "", "", "ADD", "400/6000", "", "", "1", "Lorem ipsum dolor sit amet, consectetur.", "comment for SEO field 4"]
+			],
+			[
+				["01.2001", "4", "GEL", "", "", "", "", "", "", "comment for SEO field 5"],
+				["", "", "", "Target", "400/1000", "*", "", "", "", "comment for SEO field 6"],
+				["", "", "", "WOM", "600/1000", "", "*", "2", "", "comment for SEO field 7"]
+			],
+			[
+				["02.2005", "3", "GEL", "", "", "", "", "", "", "comment for SEO field 8"],
+				["", "", "", "WOM", "400/1000", "", "", "", "", "comment for SEO field 9"]
+			],
+			[
+				["03.2008", "2", "GEL", "", "", "", "", "", "", "comment for SEO field 10"],
+				["", "", "", "WOM", "400/1000", "", "", "", "", "comment for SEO field 11"]
+			],
+			[
+				["04.2009", "1", "GEL", "", "", "", "", "3", "", "comment for SEO field 12"],
+				["", "", "", "RTB", "200/4000", "*", "*", "4", "", "comment for SEO field 13"]
+			]
+		],
+		"calls": {
+			"1": {
+				"callStatus": "Активно",
+				"date": "01.01.2006",
+				"callContact": "Карл",
+				"callComment": "Прибыльно"
+			},
+			"2": {
+				"callStatus": "Заморожен",
+				"date": "01.01.2016",
+				"callContact": "Yana",
+				"callComment": "Прибыльно"
+			}
+		}
+	}, {
+		"id": "2",
+		"brand": "Присыпка",
+		"managers": [
+			" Маша",
+			" Петр"
+		],
+		"status": "3",
+		"contacts": {
+			"Николай": {
+				"Должность": "Генеральный директор",
+				"E-mail": "nikolay@ni.ko",
+				"Тел моб:": "+7 (912) 123-34-23",
+				"Тел раб:": "+7 (912) 123-34-44",
+				"Комментарий": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, natus."
+			},
+			"Петр": {
+				"Должность": "Директор",
+				"E-mail": "nikolay@ni.ko",
+				"Тел моб:": "+7 (912) 123-34-23",
+				"Тел раб:": "+7 (912) 123-34-44",
+				"Комментарий": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nobis."
+			}
+		},
+		"docs": {
+			"22": {
+				"id": "22",
+				"offer": "Презентация",
+				"date": "21.01.2016",
+				"manager": "Маша",
+				"url": "Presentation-v12.docx"
+			},
+			"23": {
+				"id": "23",
+				"offer": "Договор",
+				"date": "22.01.2016",
+				"manager": "Маша",
+				"url": "KP_VALLIANT.docx"
+			}
+		},
+		"activities": [
+			[
+				["04.2004", "7", "GEL", "", "", "", "", "2", "", "comment for SEO field 0"],
+				["05.2000", "", "", "WOM", "400/1000", "", "", "0", "", "comment for SEO field 1"],
+				["01.2016", "", "", "XXX", "400/4000", "", "", "3", "", "comment for SEO field 2"],
+				["02.2016", "", "", "SEO", "800/1000", "", "", "", "", "comment for SEO field 3"],
+				["03.2016", "", "", "ADD", "400/6000", "", "", "1", "Lorem ipsum dolor sit amet, consectetur.", "comment for SEO field 4"]
+			],
+			[
+				["", "", "", "Target", "400/1000", "*", "", "", "", "comment for SEO field 6"],
+				["01.2001", "4", "GEL", "", "", "", "", "", "", "comment for SEO field 5"],
+				["", "", "", "WOM", "600/1000", "", "*", "2", "", "comment for SEO field 7"]
+			],
+			[
+				["", "", "", "WOM", "400/1000", "", "", "", "", "comment for SEO field 9"],
+				["02.2005", "3", "GEL", "", "", "", "", "", "", "comment for SEO field 8"]
+			],
+			[
+				["03.2008", "2", "GEL", "", "", "", "", "", "", "comment for SEO field 10"],
+				["", "", "", "WOM", "400/1000", "", "", "", "", "comment for SEO field 11"]
+			],
+			[
+				["04.2009", "1", "GEL", "", "", "", "", "3", "", "comment for SEO field 12"],
+				["", "", "", "RTB", "200/4000", "*", "*", "4", "", "comment for SEO field 13"]
+			]
+		],
+		"calls": {
+			"1": {
+				"callStatus": "Активно",
+				"date": "01.01.2006",
+				"callContact": "Карл",
+				"callComment": "Прибыльно"
+			},
+			"2": {
+				"callStatus": "Заморожен",
+				"date": "01.01.2016",
+				"callContact": "Yana",
+				"callComment": "Прибыльно"
+			}
+		}
+	}]
+}

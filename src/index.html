@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Goldfish</title>
+	<link rel="stylesheet" href="./styles/styles.css" media="all" />
+	<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<!-- <script defer src="/js/jquery-3.1.1.js" crossorigin="anonymous"></script> -->
+</head>
+<body>
+
+	<div id="services">
+		<input type="text" id="input-add-company">
+		<button id="button-add-company" type="button" >add company</button>
+		<input type="text" id="input-add-brand">
+		<button id="button-add-brand" type="button" >add brand</button>
+	</div>
+
+	<div id="current-states" v-cloak>
+		<div>company: {{currentCompanyId}}</div>
+		<div>brand: {{currentBrandId}}</div>
+	</div>
+
+	<hr>
+
+	<div id="companies">
+		<button type="button" id="all-companies">all-companies</button>
+		<div :data-id="company.id" v-for="(company, index) in companies" @click="(e) => companyClick(e, index, company.id)">
+			<!-- {{company.companyname}}	 -->
+			<company :name="company.name"></company>	
+		</div>
+	</div>
+</div>
+
+<hr>
+
+
+<div id="brands">
+	<div class="availablemanager">
+		<select multiple id="availablemanager" :class="{'is-hidden' : !showselect}">
+		<!-- <select multiple v-if="showselect[brand.id]"> -->
+		<!-- <select multiple style="display: none"> -->
+			<option v-for="(availablemanager, avaindex) in allmanagers" :value="availablemanager.id">{{ availablemanager.name }}</option>
+		</select>
+		</div>
+	<button type="button" id="all-brands">all-brands</button>
+	<div v-for="(brand, index) in brands" @click="(e) => brandClick(e, index, brand.id)">
+		<!-- {{brand.brandname}}	 -->
+		<brand :name="brand.name"></brand>
+		<div class="current-managers" @click.stop="(e) => managersclick(e, brand.id)">
+		<template v-for="(managername, manindex) in realmanagers[index]">
+			<span>{{managername}}</span><span v-if="manindex < managers[index].managers.length - 1">, </span>
+		</template>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div id="all-docs">
+	<button type="button" class="doc-type" data-doc-type="contacts">doc_contacts</button>
+	<button type="button" class="doc-type" data-doc-type="docs">doc_docs</button>
+	<button type="button" class="doc-type" data-doc-type="actions">doc_actions</button>
+	<button type="button" class="doc-type" data-doc-type="calls">doc_calls</button>
+</div>
+
+<hr>
+
+
+<div id="actual-docs" v-cloak>
+
+<!-- 		<div>
+<div>IDs - {{docsData[currentDocType]}}</div>
+<div>IDs - {{docsCurrentType}}</div>
+<div>DocType - {{currentDocType}}</div>
+<div>result - {{result}}</div>
+	</div>
+	<hr>
+ -->
+	<div v-if="currentDocType == 'actions'">
+	<div>min</div>
+		<input  v-model="min" @change="tablefilter" type="text" id="table-filter-min">
+		<div>max</div>
+		<input  v-model="max" @change="tablefilter" type="text" id="table-filter-max">
+		<table border="1">
+			<thead>
+				<tr><th @click="tablesort">Дата начала</th><th>Продолжительность</th><th>Бренд</th><th>Активности</th><th>Количество</th><th>Закрывающ</th><th>Договор</th><th>Статус</th><th>Комментарий</th></tr>
+			</thead>
+			<tbody>
+				<template v-cloak v-for="(doc, docindex) in allCurrentContent">
+					<template  v-for="(oneblock, blockindex) in allCurrentContent[docindex].data">
+						<template v-if="((+onetr[1] >= min) || !min)  && ((+onetr[1] <= max) || !max)" v-for="(onetr, stringindex) in oneblock">
+							<tr :class="{ firstrow: stringindex < 1}">
+								<template v-for="(onetd, cellindex) in onetr">
+									<td v-if="cellindex < 9" :data-index="cellindex" @click="(e) => commentFun(e, index, onetr[9], onetd, )">{{onetd}}</td>
+								</template>
+							</tr>
+						</template>
+					</template>
+				</template>
+			</tbody>
+		</table>
+	</div>
+
+
+
+	<div v-cloak v-for="(doc, index) in allCurrentContent">
+		<template v-if="currentDocType == 'contacts'">
+			<div>id {{allCurrentContent[index].id}}</div>
+			<div>name {{allCurrentContent[index].name}}</div>
+			<div>Должность {{allCurrentContent[index].rank}}</div>
+			<div>E-mail {{allCurrentContent[index].mail}}</div>
+			<div>Тел моб {{allCurrentContent[index].phoneMob}}</div>
+			<div>Тел раб {{allCurrentContent[index].phoneHome}}</div>
+			<div>Комментарий {{allCurrentContent[index].comment}}</div>
+			<div>Адрес {{allCurrentContent[index].address}}</div>
+			<hr>
+		</template>
+		<template v-if="currentDocType == 'docs'">
+			<div>id {{allCurrentContent[index].id}}</div>
+			<div>offer {{allCurrentContent[index].offer}}</div>
+			<div>date {{allCurrentContent[index].date}}</div>
+			<div>manager {{allCurrentContent[index].manager}}</div>
+			<div>url {{allCurrentContent[index].url}}</div>
+			<hr>
+		</template>
+		<template v-if="currentDocType == 'calls'">
+			<div>id {{allCurrentContent[index].id}}</div>
+			<div>callStatus {{allCurrentContent[index].callStatus}}</div>
+			<div>date {{allCurrentContent[index].date}}</div>
+			<div>callContact {{allCurrentContent[index].callContact}}</div>
+			<div>callComment {{allCurrentContent[index].callComment}}</div>
+			<hr>
+		</template>
+	</div>
+
+</div>
+
+<!-- scripts -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script> -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./node_modules/lodash/lodash.min.js"></script>
+<script defer src="./js/main.js"></script>
+</body>
+</html>
